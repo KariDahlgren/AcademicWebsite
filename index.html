@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+  // Open links to other websites in a new tab (links within this site and email links are unchanged).
+  window.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || !/^https?:$/.test(a.protocol) || a.host === location.host) return;
+    a.target = '_blank';
+    a.rel = 'noopener';
+  }, true);
+  </script>
   <meta charset="utf-8">
   <title>Kari Dahlgren — Anthropology of Energy &amp; Futures</title>
   <style>
