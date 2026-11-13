@@ -1,4 +1,4 @@
-/* Layout: flat colour panels (after the wooden-monkey palette) — a split hero, then full-width bands.
+/* Layout: flat colour panels (after the wooden-monkey palette); one page per section.
    Type: Newsreader for headings, Instrument Sans for reading. One theme, set explicitly. */
 :root {
   --light:  #efd9c1;   /* peach */
@@ -46,6 +46,7 @@ em { font-style: italic; }
 .top nav { display: flex; flex-wrap: wrap; gap: 4px 26px; font-size: 15px; }
 .top nav a { text-decoration: none; }
 .top nav a:hover { text-decoration: underline; }
+.top nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--walnut); text-decoration-thickness: 2px; text-underline-offset: 6px; }
 
 /* ---------- opening: photo + about, on the peach band ----------
    Magazine-style: the portrait floats left and the text wraps around and under it. */
@@ -59,20 +60,32 @@ em { font-style: italic; }
 .contact { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; margin: 0; }
 .bio { margin-top: 32px; }
 .cv { clear: both; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; padding-top: 32px; }
-.cv h3 { font-size: 22px; padding-bottom: 8px; border-bottom: 1px solid var(--ink); margin: 0; }
+.cv h2 { font-size: 22px; padding-bottom: 8px; border-bottom: 1px solid var(--ink); margin: 0; }
 .cv .pubs .t { font-size: 18px; }
 .cv .pubs li { grid-template-columns: 76px minmax(0, 1fr); gap: 12px; }
 
+/* ---------- project pages ---------- */
+.crumb { font-size: 15px; margin-bottom: 18px; }
+.crumb a::before { content: "← "; }
+.project-title { font-size: clamp(36px, 4.4vw, 58px); line-height: 1.06; max-width: 22ch; }
+.project-page .lede { max-width: 40ch; color: var(--muted); }
+.project-hero { margin: 28px 0 40px; }
+.project-hero img { width: 100%; max-height: 340px; aspect-ratio: 3 / 1; object-fit: cover; }
+.project-page .p-body { padding-bottom: 0; }
+.pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; margin: 56px 0 0; padding-top: 18px; border-top: 1px solid var(--ink); font-size: 15px; }
+.pager a:last-child::after { content: " →"; }
+
 /* ---------- section bands ---------- */
-.block { padding: clamp(56px, 8vw, 112px) 0; }
+.block { padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 8vw, 112px); }
+.page-band { min-height: 60vh; }
 .block.mint { background: var(--mint); }
 .block.light { background: var(--light); }
 .wrap { max-width: 1160px; margin: 0 auto; padding: 0 var(--gutter); }
 .wrap.two { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(32px, 5vw, 80px); align-items: start; }
 .wrap.two > * { min-width: 0; }
-h2 { font: 400 clamp(44px, 5.5vw, 76px)/1 var(--serif); letter-spacing: -.01em; margin-bottom: 14px; }
-h3 { font: 24px/1.2 var(--serif); margin: 0 0 12px; }
-h3.sub { margin-top: 56px; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
+.page-title { font: 400 clamp(44px, 5.5vw, 76px)/1 var(--serif); letter-spacing: -.01em; margin-bottom: 14px; }
+h2, h3 { font: 24px/1.2 var(--serif); margin: 0 0 12px; }
+h2.sub { margin-top: 56px; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
 .intro { color: var(--muted); margin-bottom: 36px; max-width: 60ch; }
 .lede { font: clamp(22px, 2vw, 27px)/1.3 var(--serif); }
 .small { font-size: 15px; color: var(--muted); }
@@ -111,10 +124,10 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 .p-body dt { color: var(--muted); }
 .p-body dd { margin: 0 0 14px; }
 .p-text { max-width: 66ch; }
-.p-text h5 { font: 600 13px/1.4 var(--sans); letter-spacing: .02em; color: var(--muted); margin: 28px 0 8px; }
+.p-text h3 { font: 600 13px/1.4 var(--sans); letter-spacing: .02em; color: var(--muted); margin: 28px 0 8px; }
 .site { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; margin-top: 28px; padding: 24px; background: var(--light); }
-.site h4 { font: 24px/1.2 var(--serif); margin-bottom: 10px; }
-.site h5 { margin-top: 18px; }
+.site h2 { font: 24px/1.2 var(--serif); margin-bottom: 10px; }
+.site h3 { margin-top: 18px; }
 .site ul { padding-left: 18px; margin: 0 0 12px; }
 .plain { list-style: none; padding: 0; margin: 0; }
 .plain li { margin-bottom: 6px; }
@@ -138,7 +151,7 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 
 /* ---------- media ---------- */
 .media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px clamp(32px, 5vw, 72px); }
-.media-group h3 { padding-bottom: 10px; border-bottom: 1px solid var(--ink); margin: 0; }
+.media-group h2 { padding-bottom: 10px; border-bottom: 1px solid var(--ink); margin: 0; }
 .media-list { list-style: none; padding: 0; margin: 0; }
 .media-list li { display: flex; flex-direction: column; padding: 12px 0; border-bottom: 1px solid var(--rule); }
 .meta { font-size: 14px; color: var(--muted); }
@@ -149,8 +162,8 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 /* ---------- publications ---------- */
 .book { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin: 28px 0 8px; }
 .book img { box-shadow: 0 18px 36px -18px rgba(44, 36, 32, .55); }
-.book h3 { font-size: clamp(32px, 3.4vw, 46px); margin-bottom: 6px; }
-.book h3 a { text-decoration: none; }
+.book h2 { font-size: clamp(32px, 3.4vw, 46px); margin-bottom: 6px; }
+.book h2 a { text-decoration: none; }
 .book p:last-child { max-width: 60ch; margin: 0; }
 .pubs { list-style: none; padding: 0; margin: 0; }
 .pubs li { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
