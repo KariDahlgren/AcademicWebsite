@@ -84,14 +84,14 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 .projects { border-top: 1px solid var(--ink); }
 .projects.compact { border-top: 0; }
 .project { border-bottom: 1px solid var(--rule); }
-.project summary {
-  list-style: none; cursor: pointer;
+.project summary, .project .row {
+  list-style: none; cursor: pointer; color: inherit; text-decoration: none;
   display: grid; grid-template-columns: 132px 92px minmax(0, 1fr) 190px 22px; gap: 4px 24px;
   align-items: start; padding: 22px 0;
 }
 .project summary::-webkit-details-marker { display: none; }
-.projects.compact .project summary { grid-template-columns: 92px minmax(0, 1fr) 190px 22px; padding: 16px 0; }
-.project summary img { width: 132px; aspect-ratio: 4 / 3; object-fit: cover; background: var(--powder); }
+.projects.compact .project summary, .projects.compact .project .row { grid-template-columns: 92px minmax(0, 1fr) 190px 22px; padding: 16px 0; }
+.project summary img, .project .row img { width: 132px; aspect-ratio: 4 / 3; object-fit: cover; background: var(--powder); }
 .p-years, .p-funder { font-size: 14px; color: var(--muted); padding-top: 6px; }
 .p-main { display: flex; flex-direction: column; gap: 4px; }
 .p-title { font: 26px/1.15 var(--serif); }
@@ -102,7 +102,9 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 .p-toggle::before, .p-toggle::after { content: ""; position: absolute; left: 3px; right: 3px; top: 10px; height: 1.5px; background: var(--ink); transition: transform .2s; }
 .p-toggle::after { transform: rotate(90deg); }
 .project[open] .p-toggle::after { transform: rotate(0); }
-.project summary:hover .p-title { color: var(--walnut); }
+.project summary:hover .p-title, .project .row:hover .p-title { color: var(--walnut); }
+.p-out { font-size: 18px; line-height: 1; margin-top: 6px; color: var(--ink); }
+.project .row:hover .p-out { color: var(--walnut); }
 .p-body { display: grid; grid-template-columns: 248px minmax(0, 1fr); gap: 24px 48px; padding: 4px 0 40px; }
 .compact .p-body { grid-template-columns: 116px minmax(0, 1fr); }
 .p-body dl { margin: 0; font-size: 15px; }
@@ -173,13 +175,13 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
   .portrait { width: 170px; margin: 4px 24px 12px 0; }
   .cv { grid-template-columns: 1fr; }
   .wrap.two, .media { grid-template-columns: 1fr; }
-  .project summary, .projects.compact .project summary { grid-template-columns: minmax(0, 1fr) 22px; }
-  .project summary img { grid-column: 1 / -1; width: 100%; aspect-ratio: 16 / 9; margin-bottom: 8px; }
+  .project summary, .project .row, .projects.compact .project summary, .projects.compact .project .row { grid-template-columns: minmax(0, 1fr) 22px; }
+  .project summary img, .project .row img { grid-column: 1 / -1; width: 100%; aspect-ratio: 16 / 9; margin-bottom: 8px; }
   .p-years { grid-column: 1; padding-top: 0; }
   .p-main { grid-column: 1; }
   .p-funder { grid-column: 1; padding-top: 0; }
-  .p-toggle { grid-column: 2; grid-row: 2; }
-  .projects.compact .p-toggle { grid-row: 1; }
+  .p-toggle, .p-out { grid-column: 2; grid-row: 2; }
+  .projects.compact .p-toggle, .projects.compact .p-out { grid-row: 1; }
   .p-body, .compact .p-body, .site { grid-template-columns: 1fr; }
   .book { grid-template-columns: 120px minmax(0, 1fr); align-items: start; }
 }
