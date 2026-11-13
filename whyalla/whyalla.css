@@ -164,6 +164,7 @@ a.out:hover h4 { color: var(--oxide-600); }
 .tag-oxide { background: var(--oxide-100); color: var(--oxide-700); }
 .tag-saltbush { background: var(--saltbush-100); color: var(--saltbush-700); }
 .tag-gulf { background: var(--gulf-100); color: var(--gulf-800); }
+.tag-done { background: var(--gulf-800); color: var(--iron-50); }
 .outs-note { margin: 20px 0 0; white-space: normal; color: var(--text-muted); }
 
 /* researcher: one profile, portrait left, text right (columns match the section heads) */
