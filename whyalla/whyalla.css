@@ -278,3 +278,5 @@ a.out:hover h4 { color: var(--oxide-600); }
 /* footer additions: two-part Acknowledgement of Country, AI statement */
 .ack-text { display: grid; gap: var(--space-4); max-width: 760px; }
 .ai-note { margin: 0; padding: var(--space-5) 0 var(--space-7); border-top: 1px solid var(--border-inverse); font: var(--type-small); font-size: 13px; color: var(--iron-400); max-width: 72ch; }
+.out .out-file { margin-top: 10px; color: var(--oxide-600); white-space: normal; }
+a.out:hover .out-file { text-decoration: underline; }
