@@ -15,5 +15,6 @@ https://claude.ai/artifact/8aD4PMQ99YSf6NRHPKQv9D
 4. Re-add the links on `whyalla/index.html`: "Get involved" in the header nav and a
    header button, the hero "Get involved" button, and "Get in touch" under
    "What the project will make".
-5. On `whyalla/ethics/index.html`, point the header back link to `/whyalla/get-involved/`.
+5. The Ethics page is also saved, in `_saved/whyalla-ethics/`. Restore it first, then point its
+   header back link to `/whyalla/get-involved/`.
 6. Add `https://karidahlgren.org/whyalla/get-involved/` back to `sitemap.xml`.
