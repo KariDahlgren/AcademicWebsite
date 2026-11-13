@@ -161,6 +161,7 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 }
 .foot p { margin: 0; font-size: 15px; }
 .foot .name { font: 34px/1 var(--serif); margin-bottom: 6px; }
+.foot .ai-note { flex-basis: 100%; max-width: 72ch; font-size: 13px; color: #3f3a37; padding-top: 20px; margin-top: 8px; border-top: 1px solid rgba(44, 36, 32, .2); }
 
 /* ---------- narrow screens ---------- */
 @media (max-width: 900px) {
