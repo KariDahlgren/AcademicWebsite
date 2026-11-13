@@ -136,6 +136,22 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 .facts dt { color: var(--muted); }
 .facts dd { margin: 0; }
 
+/* survey results: one dot per student (68), three nested groups */
+.units { margin: 4px 0 36px; }
+.dots { display: grid; grid-template-columns: repeat(17, minmax(0, 1fr)); gap: 6px; max-width: 380px; }
+.dot, .key { display: block; aspect-ratio: 1; border-radius: 50%; }
+.s1 { background: #2c2420; }
+.s2 { background: #9c7b66; }
+.s3 { box-shadow: inset 0 0 0 1.5px #6b6059; }
+.unit-key { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; font-size: 15px; }
+.unit-key li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 12px; align-items: start; }
+.unit-key .key { width: 14px; margin-top: 4px; }
+.unit-key strong { font-weight: 600; }
+.units figcaption { margin-top: 16px; }
+.dot { transition: opacity .15s; }
+.units:has(.k1:hover) .dot:not(.s1), .units:has(.k2:hover) .dot:not(.s2), .units:has(.k3:hover) .dot:not(.s3) { opacity: .2; }
+@media (prefers-reduced-motion: reduce) { .dot { transition: none; } }
+
 /* ---------- media ---------- */
 .media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px clamp(32px, 5vw, 72px); }
 .media-group h3 { padding-bottom: 10px; border-bottom: 1px solid var(--ink); margin: 0; }
