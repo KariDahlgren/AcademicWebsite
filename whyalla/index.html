@@ -3,118 +3,207 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Whyalla Futures — Kari Dahlgren</title>
-<meta name="description" content="Whyalla Futures is a research project with people in Whyalla, South Australia, about steel, hydrogen and how the city's future is imagined and lived.">
+<title>Whyalla Futures Research</title>
+<meta name="description" content="What futures do people in Whyalla want, for themselves and their community? A Monash University research project, with the Voices from Whyalla video podcast.">
 <link rel="canonical" href="https://karidahlgren.org/whyalla/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Whyalla Futures">
-<meta property="og:title" content="Whyalla Futures — Kari Dahlgren">
-<meta property="og:description" content="Whyalla Futures is a research project with people in Whyalla, South Australia, about steel, hydrogen and how the city's future is imagined and lived.">
+<meta property="og:site_name" content="Whyalla Futures Research">
+<meta property="og:title" content="Whyalla Futures Research">
+<meta property="og:description" content="What futures do people in Whyalla want, for themselves and their community? A Monash University research project, with the Voices from Whyalla video podcast.">
 <meta property="og:url" content="https://karidahlgren.org/whyalla/">
-<meta property="og:image" content="https://karidahlgren.org/images/steelworks-harbour.jpg">
-<meta property="og:image:alt" content="Whyalla steelworks and stockpiles across the water">
+<meta property="og:image" content="https://karidahlgren.org/whyalla/assets/brand/voices-from-whyalla-title.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Whyalla Futures — Kari Dahlgren">
-<meta name="twitter:description" content="Whyalla Futures is a research project with people in Whyalla, South Australia, about steel, hydrogen and how the city's future is imagined and lived.">
-<meta name="twitter:image" content="https://karidahlgren.org/images/steelworks-harbour.jpg">
+<meta name="twitter:title" content="Whyalla Futures Research">
+<meta name="twitter:description" content="What futures do people in Whyalla want, for themselves and their community? A Monash University research project, with the Voices from Whyalla video podcast.">
+<meta name="twitter:image" content="https://karidahlgren.org/whyalla/assets/brand/voices-from-whyalla-title.jpg">
+<meta name="theme-color" content="#20261C">
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&display=swap">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/whyalla/tokens.css">
+<link rel="stylesheet" href="/whyalla/whyalla.css">
 </head>
 <body>
 
-<header class="top">
-  <a class="name" href="/">Kari Dahlgren</a>
-  <nav aria-label="Main">
-    <a href="/">About</a><a href="/research/">Research</a><a href="/whyalla/" aria-current="page">Whyalla Futures</a><a href="/teaching/">Teaching</a><a href="/media/">Media</a><a href="/publications/">Publications</a>
-  </nav>
+<header class="hdr">
+  <div class="wrap in">
+    <a class="brand" href="/whyalla/"><b>WHYALLA FUTURES</b><span class="lbl">Research · SA</span></a>
+    <nav aria-label="Sections">
+      <a href="#questions">Questions</a><a href="#voices">Podcast</a><a href="#involved">Get involved</a><a href="#outputs">Plans</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#involved">Get involved</a>
+  </div>
 </header>
-<nav class="w-nav" aria-label="Whyalla Futures">
-  <div class="wrap"><span class="w-mark">Whyalla Futures</span><a href="/whyalla/" aria-current="page">Overview</a><a href="/whyalla/take-part/">Take part</a><a href="/whyalla/voices/">Voices of Whyalla podcast</a></div>
-</nav>
 
 <main>
-
-<section class="w-hero">
-  <img src="/images/steelworks-harbour.jpg" alt="Whyalla steelworks and stockpiles across the water">
+<section class="mast" aria-labelledby="top-title">
+  <!-- TODO: replace with assets/photos/kangaroo-steelworks-wide.jpg once supplied,
+       and restore the kangaroo caption below (see README handoff). -->
+  <img src="/whyalla/assets/photos/hero-stand-in.jpg" alt="The Whyalla steelworks blast furnace and stockpiles under a clear sky" fetchpriority="high">
   <div class="wrap">
-    <p class="w-kicker">Whyalla, South Australia</p>
-    <h1 class="page-title">Whyalla Futures</h1>
-    <p class="lede">A research project listening to people in Whyalla about steel, hydrogen, work and what the future of the city could be.</p>
-    <div class="buttons"><a class="button" href="/whyalla/take-part/">Take part in the research</a><a class="button ghost" href="/whyalla/voices/">Listen to Voices of Whyalla</a></div>
+    <div class="mast-copy">
+      <span class="tag">Futures anthropology · Whyalla, SA</span>
+      <h1 class="disp" id="top-title">Whyalla<br>Futures<br><span>Research</span></h1>
+      <p class="abs">Whyalla is where the challenge of decarbonising heavy industry meets a town that's heard many promises. What futures do people here want, for themselves and their community?</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#involved">Get involved <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="btn btn-inv" href="#voices"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Voices from Whyalla</a>
+      </div>
+    </div>
+    <p class="credit"><b>Fig. 1</b><span>The steelworks on the edge of town. A place between heavy industry, arid country and the gulf.</span></p>
   </div>
 </section>
 
-<section class="block">
-  <div class="wrap two">
-    <div>
-      <h2 class="w-h">Why Whyalla</h2>
-      <p>Whyalla has been built around heavy industry for generations. Today it sits at the centre of some of Australia’s biggest promises about the energy transition. Those promises include greener steel, a hydrogen hub, and new jobs and investment for the Upper Spencer Gulf.</p>
-      <p>I am an anthropologist, and my work looks at how communities live with big, uncertain plans for their future. In Whyalla, hydrogen and steel futures have been announced, revised and put on hold, sometimes several times over. People who live and work here have watched those plans change, and they know things about them that reports and media releases miss.</p>
-      <p>That is why I want to spend time in Whyalla. The aim is not only to study the city. It is to understand what these changes mean for the people expected to host them, and to make sure local experiences and hopes are part of the conversation about Australia’s industrial future.</p>
-    </div>
-    <div>
-      <h2 class="w-h">What the research asks</h2>
-      <ul class="w-list">
-        <li>How do plans to make Whyalla a hydrogen “hub” shape local expectations of jobs, growth and a cleaner future?</li>
-        <li>How do today’s plans connect to Whyalla’s longer history of industrial change?</li>
-        <li>What do people in Whyalla want from the energy transition, and what worries them?</li>
-        <li>When do big future plans speed up change, and when do they hold it back?</li>
-      </ul>
-      <p class="small">Whyalla Futures is part of <a href="/research/hydrogen-hub-futures/">Hydrogen Hub Futures</a>, a project at Monash University funded by the Australian Research Council (2025–2029).</p>
-    </div>
-  </div>
-</section>
-
-<section class="block light">
+<section class="sec" id="questions" aria-labelledby="q-title">
   <div class="wrap">
-    <h2 class="w-h">Collaborations</h2>
-    <p class="intro">This research is done with people and organisations in Whyalla, not just about them.</p>
-    <div class="w-cards">
-      <article class="w-card">
-        <h3><a href="https://www.thewhyallacollective.com.au/" target="_blank" rel="noopener">The Whyalla Collective</a></h3>
-        <p>A local community collective. Kari works with the Whyalla Collective as part of Hydrogen Hub Futures, including on Voices of Whyalla.</p>
-      </article>
-      <article class="w-card">
-        <h3>Monash University</h3>
-        <p>The research is based in the School of Social Sciences at Monash University and follows Monash University’s research ethics requirements.</p>
-      </article>
-      <article class="w-card">
-        <h3>Want to work together?</h3>
-        <p>Community groups, schools, unions, businesses and local organisations are welcome to <a href="mailto:kari.dahlgren@monash.edu?subject=Whyalla%20Futures%20collaboration">get in touch</a> about working together.</p>
-      </article>
+    <div class="sec-head">
+      <h2 class="disp" id="q-title">Research questions</h2>
+      <p>This project uses ethnography, futures methods and co-design workshops to understand how people in Whyalla imagine their futures. The path to decarbonising iron and steel making is uncertain, and the people who live with that uncertainty deserve a say in what comes next.</p>
+    </div>
+    <div class="qs">
+      <div class="q"><span class="n">RQ1</span><div><h3>Who imagines Whyalla's future?</h3><p>How are futures for the town produced by governments, companies and investors, and what models, like the hydrogen hub, do they rely on?</p></div></div>
+      <div class="q"><span class="n">RQ2</span><div><h3>How are promises lived?</h3><p>How do residents experience repeated cycles of announcement, hope, delay and insecurity, and how does that history shape trust in the next plan?</p></div></div>
+      <div class="q"><span class="n">RQ3</span><div><h3>What does decarbonising steel mean here?</h3><p>What are the everyday stakes of industrial decarbonisation for jobs, health, landscape and identity in a steel town?</p></div></div>
+      <div class="q"><span class="n">RQ4</span><div><h3>Whose futures are missing?</h3><p>Whose voices and desires are absent from top-down approaches to regional industrial town planning, and what do they imagine instead?</p></div></div>
     </div>
   </div>
 </section>
 
-<section class="block">
-  <div class="wrap two">
-    <div>
-      <h2 class="w-h">Get involved</h2>
-      <p>If you live or work in Whyalla, or have a connection to the city, I would love to hear from you. You can find out what taking part involves, read the participant information, and let me know you are interested.</p>
-      <p><a class="button" href="/whyalla/take-part/">Take part</a></p>
+<section class="break" aria-label="Photographs of Whyalla">
+  <div class="break-grid">
+    <figure class="bimg"><img src="/whyalla/assets/photos/gantry-crane-gulls.jpg" srcset="/whyalla/assets/photos/gantry-crane-gulls-800.jpg 800w, /whyalla/assets/photos/gantry-crane-gulls.jpg 1600w" sizes="(max-width: 860px) 100vw, 33vw" alt="Gantry crane and blast furnace across the harbour, with gulls" loading="lazy" style="object-position:45% 50%"></figure>
+    <figure class="bimg"><img src="/whyalla/assets/photos/cuttlefish-mosaic-foreshore.jpg" srcset="/whyalla/assets/photos/cuttlefish-mosaic-foreshore-700.jpg 700w, /whyalla/assets/photos/cuttlefish-mosaic-foreshore.jpg 1125w" sizes="(max-width: 860px) 100vw, 33vw" alt="Colourful community mosaic of a giant cuttlefish on the Whyalla foreshore" loading="lazy" style="object-position:40% 30%"></figure>
+    <figure class="bimg"><img src="/whyalla/assets/photos/hotel-bayview-art-deco.jpg" srcset="/whyalla/assets/photos/hotel-bayview-art-deco-800.jpg 800w, /whyalla/assets/photos/hotel-bayview-art-deco.jpg 1600w" sizes="(max-width: 860px) 100vw, 33vw" alt="The art deco Hotel Bayview on a Whyalla street corner under a cloud-flecked blue sky" loading="lazy" style="object-position:62% 50%"></figure>
+  </div>
+</section>
+
+<section class="sec voices" id="voices" aria-labelledby="v-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="disp" id="v-title">Voices from Whyalla</h2>
+      <div>
+        <p>A video podcast from the project. People who live and work in Whyalla talk about the town, the promises made to it, and the futures they want.</p>
+        <p class="credit-line">Produced by Sophie Hancock, in collaboration with <a href="https://www.thewhyallacollective.com.au/" target="_blank" rel="noopener">The Whyalla Collective</a>.</p>
+      </div>
     </div>
-    <div>
-      <h2 class="w-h">In the news</h2>
-      <ul class="media-list">
-        <li><span class="meta">Whyalla News, April 2026</span><a href="https://whyallanewsonline.com.au/news/2026/04/14/study-seeking-local-voices/" target="_blank" rel="noopener">Study seeking local voices</a></li>
-      </ul>
+    <!-- Episodes are listed in /whyalla/episodes.js. Add new episodes there. -->
+    <div class="vgrid">
+      <div>
+        <button class="player" id="player" type="button" aria-label="Play episode">
+          <img src="/whyalla/assets/brand/voices-from-whyalla-title.jpg" srcset="/whyalla/assets/brand/voices-from-whyalla-title-800.jpg 800w, /whyalla/assets/brand/voices-from-whyalla-title.jpg 1600w" sizes="(max-width: 860px) 100vw, 60vw" alt="Voices from Whyalla title card: a TWC production, made possible by the Australian Research Council and Monash University's Faculty of Arts">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="7,4 20,12 7,20"></polygon></svg></span>
+        </button>
+        <div class="ep-now">
+          <span class="lbl" id="epMeta">Episode 01</span>
+          <h3 id="epTitle">Episode 1: Staying, leaving, coming back</h3>
+          <p id="epDesc">Staying, leaving, and finding your way back to Whyalla.</p>
+        </div>
+        <div class="subs">
+          <a class="btn btn-inv btn-md" id="epLink" href="https://youtu.be/UVOSbZkcc0U" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg> Watch on YouTube</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="lbl eps-h" id="eps-h">All episodes</h3>
+        <ul class="eps" id="eps" aria-labelledby="eps-h"></ul>
+      </div>
     </div>
   </div>
 </section>
 
+<section class="sec involved" id="involved" aria-labelledby="i-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="disp" id="i-title">Get involved</h2>
+      <p>If you live in Whyalla, work here, grew up here or have left and still care about the town, we'd like to hear from you. Taking part is voluntary, and you can stop at any time.</p>
+    </div>
+    <div class="ways">
+      <div class="way"><span class="n">01</span><h3>Talk with us</h3><p>A conversational interview, about an hour, at a time and place that suits you.</p></div>
+      <div class="way"><span class="n">02</span><h3>Join a workshop</h3><p>A group session imagining what the town could be and what it needs.</p></div>
+      <div class="way"><span class="n">03</span><h3>Explore working together</h3><p>Got an idea, a project or a question the research could help with? We're open to a chat about ways we might support it.</p></div>
+      <div class="way"><span class="n">04</span><h3>Stay in the loop</h3><p>Be notified when research outputs are available, from new episodes to the final report.</p></div>
+    </div>
+    <div class="inv-grid">
+      <!-- When the Qualtrics form is ready, put its link in QUALTRICS_URL in /whyalla/whyalla.js.
+           The form below is then replaced by the Qualtrics form. Until then it opens
+           an email to the researcher, so nothing is stored on a third-party service. -->
+      <form class="form" id="eoi" data-email="kari.dahlgren@monash.edu" novalidate>
+        <h3 class="prompt">Register your interest</h3>
+        <div class="row2">
+          <div class="field"><label class="lbl" for="eName">Name</label><input id="eName" name="name" autocomplete="name" required></div>
+          <div class="field"><label class="lbl" for="eContact">Email or phone</label><input id="eContact" name="contact" autocomplete="email" required></div>
+        </div>
+        <div class="field"><label class="lbl" for="eWay">I'd like to</label><select id="eWay" name="way"><option>Take part in a conversational interview</option><option>Join a workshop</option><option>Explore working together</option><option>Be notified when outputs are available</option><option>Not sure yet, tell me more</option></select></div>
+        <div class="field"><label class="lbl" for="eMsg">Anything you'd like us to know (optional)</label><textarea id="eMsg" name="message"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+        <p class="lbl form-status" id="eoiStatus" role="status" aria-live="polite"></p>
+        <p class="note">Registering doesn't sign you up to anything. We'll send you the Explanatory Statement and you can decide from there.</p>
+      </form>
+      <div class="docs">
+        <div class="doc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><div><h4>Ethics approval</h4><p>This project has been approved by the Monash University Human Research Ethics Committee.</p><span class="lbl muted">Project ID: [number]</span><br><a href="/whyalla/ethics/" class="lbl more">Learn more about ethics &amp; consent →</a></div></div>
+        <!-- To add a PDF: put it in /whyalla/documents/ and replace the [PDF to be added] line with
+             <a class="lbl more" href="/whyalla/documents/explanatory-statement.pdf">Download PDF →</a> -->
+        <div class="doc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><div><h4>Explanatory Statement</h4><p>What the research involves, how your information is used and stored, and your rights as a participant.</p><span class="lbl muted">[PDF to be added]</span></div></div>
+        <div class="doc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg><div><h4>Consent form</h4><p>Signed before an interview, workshop or recording.</p><span class="lbl muted">[PDF to be added]</span></div></div>
+        <div class="doc contact"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><div><h4>Contact the researcher</h4><p>Dr Kari Dahlgren, Senior Lecturer in Anthropology, Monash University</p><span class="lbl"><a href="mailto:kari.dahlgren@monash.edu">kari.dahlgren@monash.edu</a></span></div></div>
+        <p class="small" style="margin:16px 0 0">If you have a concern or complaint about how this research is being conducted, contact the Monash University Human Research Ethics Committee, quoting the project ID: [MUHREC contact details]. <a href="/whyalla/ethics/">Read full ethics &amp; consent information</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="outputs" aria-labelledby="o-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="disp" id="o-title">What the project will make</h2>
+      <p>These outputs are how what people share comes back to the town and reaches the people making decisions. The first is already out.</p>
+    </div>
+    <div class="outs">
+      <!-- TODO: replace with assets/photos/hotel-spencer-facade.jpg once supplied. -->
+      <figure class="film"><img src="/whyalla/assets/photos/hotel-bayview-art-deco.jpg" srcset="/whyalla/assets/photos/hotel-bayview-art-deco-800.jpg 800w, /whyalla/assets/photos/hotel-bayview-art-deco.jpg 1600w" sizes="(max-width: 860px) 100vw, 56vw" alt="" loading="lazy" style="object-position:70% 40%"><figcaption class="cap"><span class="tag">Planned · Short film</span><h3>A film made with the town</h3><p>Built from podcast interviews, workshops and time spent in Whyalla, and screened locally first.</p></figcaption></figure>
+      <div class="out-list">
+        <a class="out" href="#voices"><div><span class="tag tag-ember"><span class="dot"></span>Complete · Video podcast</span><h4>Voices from Whyalla</h4><p>Conversations with people who live and work in Whyalla. Produced by Sophie Hancock with The Whyalla Collective. Watch the episodes above.</p></div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></a>
+        <div class="out"><div><span class="tag tag-oxide">Planned · Policy report</span><h4>Community futures for Whyalla</h4><p>Recommendations that put residents' own visions in front of state and federal decision-makers.</p></div></div>
+        <div class="out"><div><span class="tag tag-saltbush">Planned · Workshops</span><h4>Imagine Whyalla futures workshops</h4><p>Co-design sessions with residents, shared back with the community.</p></div></div>
+        <div class="out"><div><span class="tag tag-gulf">Planned · Research</span><h4>Academic writing on industrial decarbonisation</h4><p>On promised futures, the hydrogen hub model and whose voices count.</p></div></div>
+        <p class="lbl outs-note">Want to hear when these are out? <a href="#involved">Get in touch</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec ruled" id="team" aria-labelledby="t-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="disp" id="t-title">Team</h2>
+      <p>Whyalla Futures Research is part of Hydrogen Hub Futures, an Australian Research Council project (DE250100024) based at Monash University.</p>
+    </div>
+    <div class="team">
+      <div class="person"><figure class="portrait"><img src="/whyalla/assets/people/kari-dahlgren.jpg" alt="Dr Kari Dahlgren" loading="lazy"></figure><h4>Dr Kari Dahlgren</h4><div class="lbl muted">Senior Lecturer in Anthropology, Monash University</div><a href="mailto:kari.dahlgren@monash.edu">kari.dahlgren@monash.edu</a></div>
+      <!-- Placeholder team cards: replace with real names, roles and portraits, or delete. -->
+      <div class="person"><div class="ph-slot"><span class="lbl muted">Portrait</span></div><h4>[Name]</h4><div class="lbl muted">PhD researcher</div></div>
+      <div class="person"><div class="ph-slot"><span class="lbl muted">Portrait</span></div><h4>[Name]</h4><div class="lbl muted">Research assistant</div></div>
+      <div class="person"><div class="ph-slot"><span class="lbl muted">Portrait</span></div><h4>[Partner]</h4><div class="lbl muted">Community partner</div></div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="foot">
-  <div>
-    <p class="name">Kari Dahlgren</p>
-    <p>School of Social Sciences, Monash University</p>
+  <div class="wrap">
+    <div class="ack">
+      <span class="lbl">Acknowledgement of Country</span>
+      <p>This research takes place on Barngarla Country. We acknowledge the Barngarla people as the Traditional Owners of the lands and waters of Whyalla, and pay our respects to Elders past and present.</p>
+    </div>
+    <div class="fcols">
+      <div><div class="word">WHYALLA FUTURES RESEARCH</div><div class="lbl">Monash University · Hydrogen Hub Futures</div></div>
+      <div class="span2"><h5 class="lbl">Funding acknowledgement</h5><p>Funding from the Australian Research Council Hydrogen Hub Futures Project, DE250100024.</p></div>
+      <div><h5 class="lbl">Contact</h5><a href="mailto:kari.dahlgren@monash.edu">kari.dahlgren@monash.edu</a><a href="/whyalla/ethics/">Ethics &amp; consent</a><a href="/">Kari Dahlgren</a></div>
+    </div>
   </div>
-  <p class="contact"><a href="mailto:kari.dahlgren@monash.edu">kari.dahlgren@monash.edu</a><span><a href="https://scholar.google.com.au/citations?hl=en&amp;user=aAl23VQAAAAJ" target="_blank" rel="noopener">Google Scholar</a></span><span><a href="https://orcid.org/0000-0002-3111-8891" target="_blank" rel="noopener">ORCID</a></span><span><a href="https://www.linkedin.com/in/kari-dahlgren-38048168/" target="_blank" rel="noopener">LinkedIn</a></span></p>
-  <p class="ai-note">AI statement: This website was designed and built with assistance from Claude (Anthropic). All research content, text and images were provided and reviewed by Kari Dahlgren.</p>
 </footer>
 
+<script src="/whyalla/episodes.js"></script>
+<script src="/whyalla/whyalla.js"></script>
 </body>
 </html>
