@@ -259,7 +259,7 @@ a.out:hover h4 { color: var(--oxide-600); }
 /* project lead strip, between masthead and research questions */
 .lead { border-bottom: 1px solid var(--border-hairline); }
 .lead-in { padding-block: var(--space-6); }
-.lead p { margin: 0; font: 400 20px/1.45 var(--font-body); color: var(--iron-900); max-width: 640px; text-wrap: pretty; }
+.lead p { margin: 0; font: 400 20px/1.45 var(--font-body); color: var(--iron-900); max-width: 820px; text-wrap: pretty; }
 .lead a { color: var(--oxide-600); font-weight: 600; }
 .lead a:hover { color: var(--oxide-700); }
 @media (max-width: 860px) { .lead p { font-size: 18px; } }
