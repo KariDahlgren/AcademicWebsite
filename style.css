@@ -50,7 +50,7 @@ em { font-style: italic; }
 /* ---------- opening: photo + about, on the peach band ---------- */
 .opening { background: var(--light); padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 7vw, 96px); }
 .intro-grid { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
-.portrait { margin: 0; background: var(--blue); position: sticky; top: 96px; }
+.portrait { margin: 0; background: var(--blue); }
 .portrait img { width: 100%; aspect-ratio: 5 / 6; object-fit: cover; object-position: 50% 30%; }
 .opening h1 { font: clamp(30px, 3.3vw, 46px)/1.12 var(--serif); max-width: 24ch; margin-bottom: 22px; }
 .role { font-size: 15px; color: var(--muted); margin-bottom: 8px; }
@@ -165,7 +165,7 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 /* ---------- narrow screens ---------- */
 @media (max-width: 900px) {
   .intro-grid { grid-template-columns: 1fr; }
-  .portrait { position: static; width: min(220px, 60%); }
+  .portrait { width: min(220px, 60%); }
   .cv { grid-template-columns: 1fr; }
   .wrap.two, .media { grid-template-columns: 1fr; }
   .project summary, .projects.compact .project summary { grid-template-columns: minmax(0, 1fr) 22px; }
