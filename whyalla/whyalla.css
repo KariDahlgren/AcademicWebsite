@@ -255,3 +255,12 @@ a.out:hover h4 { color: var(--oxide-600); }
   .player img, .btn { transition: none; }
 }
 .e-id { color: var(--gulf-800); }
+
+/* project lead strip, between masthead and research questions */
+.lead { border-bottom: 1px solid var(--border-hairline); }
+.lead-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: var(--space-7); align-items: baseline; padding-block: var(--space-6); }
+.lead .lbl { color: var(--oxide-600); }
+.lead p { margin: 0; font: 400 20px/1.45 var(--font-body); color: var(--iron-900); max-width: 640px; text-wrap: pretty; }
+.lead a { color: var(--oxide-600); font-weight: 600; }
+.lead a:hover { color: var(--oxide-700); }
+@media (max-width: 860px) { .lead-in { grid-template-columns: 1fr; gap: var(--space-2); } .lead p { font-size: 18px; } }
