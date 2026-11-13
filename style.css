@@ -47,18 +47,19 @@ em { font-style: italic; }
 .top nav a { text-decoration: none; }
 .top nav a:hover { text-decoration: underline; }
 
-/* ---------- hero: two colour panels ---------- */
-.hero { display: grid; grid-template-columns: 1.35fr 1fr; }
-.hero-text {
-  background: var(--light);
-  padding: clamp(40px, 7vw, 96px) var(--gutter) clamp(32px, 5vw, 64px);
-  display: flex; flex-direction: column; justify-content: flex-end; min-width: 0;
-}
-.hero h1 { font: clamp(34px, 4.3vw, 62px)/1.08 var(--serif); letter-spacing: -.005em; margin-bottom: 28px; max-width: 18ch; }
-.role { font-size: 15px; color: var(--muted); margin-bottom: 10px; }
+/* ---------- opening: photo + about, on the peach band ---------- */
+.opening { background: var(--light); padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 7vw, 96px); }
+.intro-grid { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.portrait { margin: 0; background: var(--blue); position: sticky; top: 96px; }
+.portrait img { width: 100%; aspect-ratio: 5 / 6; object-fit: cover; object-position: 50% 30%; }
+.opening h1 { font: clamp(30px, 3.3vw, 46px)/1.12 var(--serif); max-width: 24ch; margin-bottom: 22px; }
+.role { font-size: 15px; color: var(--muted); margin-bottom: 8px; }
 .contact { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; margin: 0; }
-.hero-photo { margin: 0; background: var(--blue); display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; aspect-ratio: 5 / 6; }
+.bio { max-width: 66ch; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--rule); }
+.cv { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 40px; }
+.cv h3 { font-size: 22px; padding-bottom: 8px; border-bottom: 1px solid var(--ink); margin: 0; }
+.cv .pubs .t { font-size: 18px; }
+.cv .pubs li { grid-template-columns: 62px minmax(0, 1fr); gap: 12px; }
 
 /* ---------- section bands ---------- */
 .block { padding: clamp(56px, 8vw, 112px) 0; }
@@ -151,12 +152,6 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 .pubs a.t:hover { text-decoration: underline; }
 .cite { display: block; font-size: 15px; color: var(--muted); margin-top: 4px; }
 
-/* ---------- about ---------- */
-.about .lede { margin-bottom: 1.1em; }
-.cv { padding-top: 12px; }
-.cv h3 { margin-top: 0; }
-.cv .pubs { margin-bottom: 40px; }
-.cv .pubs .t { font-size: 19px; }
 
 /* ---------- footer ---------- */
 .foot {
@@ -169,9 +164,9 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 
 /* ---------- narrow screens ---------- */
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-photo { order: -1; max-height: 70vh; }
-  .hero-photo img { aspect-ratio: 4 / 3; object-position: 50% 25%; }
+  .intro-grid { grid-template-columns: 1fr; }
+  .portrait { position: static; width: min(220px, 60%); }
+  .cv { grid-template-columns: 1fr; }
   .wrap.two, .media { grid-template-columns: 1fr; }
   .project summary, .projects.compact .project summary { grid-template-columns: minmax(0, 1fr) 22px; }
   .project summary img { grid-column: 1 / -1; width: 100%; aspect-ratio: 16 / 9; margin-bottom: 8px; }
