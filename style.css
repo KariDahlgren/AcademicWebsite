@@ -79,6 +79,7 @@ figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 
 /* ---------- research rows ---------- */
 .projects { border-top: 1px solid var(--ink); }
+.projects.compact { border-top: 0; }
 .project { border-bottom: 1px solid var(--rule); }
 .project summary {
   list-style: none; cursor: pointer;
